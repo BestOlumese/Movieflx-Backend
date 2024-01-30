@@ -26,6 +26,27 @@ class ApiMovieSearchListView(ListAPIView):
     filter_backends = [filters.SearchFilter]
     search_fields = ['title', 'genre']
 
+class ApiMovieCinemaMovieListView(ListAPIView):
+    queryset = Movie.objects.filter(showtype=3).order_by('-date_created')
+    serializer_class = MovieSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category']
+    pagination_class = PageNumberPagination
+
+class ApiMovieStreamingNowListView(ListAPIView):
+    queryset = Movie.objects.filter(showtype=2).order_by('-date_created')
+    serializer_class = MovieSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category']
+    pagination_class = PageNumberPagination
+
+class ApiMovieComingSoonListView(ListAPIView):
+    queryset = Movie.objects.filter(showtype=1).order_by('-date_created')
+    serializer_class = MovieSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['category']
+    pagination_class = PageNumberPagination
+
 class ApiMovieRandomListView(ListAPIView):
     queryset = Movie.objects.all().order_by('?')
     serializer_class = MovieSerializer

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'Category',
     'Movie',
     'Slider',
+    'MovieGallery',
+    'ShowType',
     'django_filters',
     "corsheaders",
 ]
