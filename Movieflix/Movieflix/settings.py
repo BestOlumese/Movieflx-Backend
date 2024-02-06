@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'Movieflix.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'movieflix',
+        'NAME': 'defaultdbdatabas',
         'USER': 'doadmin',
         'PASSWORD': 'AVNS_g-GtnopbCJPtL476njS',
         'HOST': 'movieflix-do-user-13751063-0.c.db.ondigitalocean.com',
