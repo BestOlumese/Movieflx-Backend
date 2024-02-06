@@ -91,9 +91,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'movieflix',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_g-GtnopbCJPtL476njS',
+        'HOST': 'movieflix-do-user-13751063-0.c.db.ondigitalocean.com',
+        'PORT': '25060',
     }
 }
 
