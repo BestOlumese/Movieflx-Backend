@@ -11,3 +11,4 @@ sqlparse==0.4.4
 typing_extensions==4.9.0
 tzdata==2023.4
 gunicorn
+backports.zoneinfo==0.2.1;python_version<"3.9"
